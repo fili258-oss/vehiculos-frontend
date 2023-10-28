@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 my-4">
+      <table class="table table-striped">
+        <thead>
+          <tr>            
+            <th>Identificación</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Genero</th>
+            <th>Teléfono</th>
+          </tr>          
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of empleados">
+            <td>{{ e.identificacion }}</td>
+            <td>{{ e.nombre }}</td>
+            <td>{{ e.edad }}</td>
+            <td>{{ e.genero }}</td>
+            <td>{{ e.telefono }}</td>
+          </tr>                  
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+</div>

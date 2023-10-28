@@ -1,28 +1,31 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6 my-4">
+    <div class="col my-4 px-lg-4">
+
       <table class="table table-striped">
         <thead>
-          <tr>
-            <th>Id</th>
+          <tr>            
             <th>Placa</th>
             <th>Modelo</th>
             <th>Color</th>
             <th>Marca</th>
+            <th>Acciones</th>
           </tr>          
         </thead>
         <tbody>
-          <tr *ngFor="let v of vehiculos">
-            <td>{{ v.id }}</td>
+          <tr *ngFor="let v of vehiculos">            
             <td>{{ v.placa }}</td>
             <td>{{ v.modelo }}</td>
             <td>{{ v.color }}</td>
             <td>{{ v.marca }}</td>
+            <td>
+              <button class="btn btn-primary sm">Editar</button>
+            </td>
           </tr>                  
         </tbody>
       </table>
     </div>
-    <div class="col-6 p-4">
+    <!-- <div class="col-6 p-4">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input class="form-control" id="nombre" type="text" name="nombre"/>
@@ -39,7 +42,7 @@
         </div>
       </div>  
       <button class="btn btn-primary my-2">Enviar</button>      
-    </div>
+    </div> -->
     
   </div>
 </div>
