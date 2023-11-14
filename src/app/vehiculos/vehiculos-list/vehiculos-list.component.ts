@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Vehiculo } from '../vehiculo';
 import { VehiculosService } from '../vehiculos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehiculos-list',
@@ -10,7 +11,7 @@ import { VehiculosService } from '../vehiculos.service';
 export class VehiculosListComponent implements OnInit {
 
   vehiculos: Array<Vehiculo> = [];
-  constructor(private vehiculoService:VehiculosService) { }
+  constructor(private routerPath: Router,private vehiculoService:VehiculosService) { }
 
 
   ngOnInit() {
@@ -23,6 +24,10 @@ export class VehiculosListComponent implements OnInit {
         this.vehiculos=ves;
       }
     )
+  }
+
+  onEditarNavigate(id: number) {
+    this.routerPath.navigate([`/vehiculos/editar/${id}`]);
   }
 
 }

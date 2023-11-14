@@ -14,8 +14,7 @@ export class VehiculoCreateComponent implements OnInit {
   vehiculoForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, 
-    private routerPath: Router,
-    private route: ActivatedRoute, private vehiculosService:VehiculosService){}
+    private vehiculosService:VehiculosService){}
   
 
   ngOnInit() {
@@ -24,7 +23,8 @@ export class VehiculoCreateComponent implements OnInit {
       marca: ['', [Validators.required, Validators.minLength(2)]],
       color: ['', [Validators.required, Validators.minLength(1)]],
       modelo: ['', [Validators.required, Validators.minLength(4)]],
-    })
+      imagen: ['', [Validators.required, Validators.maxLength(10)]]
+    });
   }
 
   crearVehiculo(vehiculo: Vehiculo): void {
@@ -32,8 +32,8 @@ export class VehiculoCreateComponent implements OnInit {
       (vehiculoCreado)=> {
         alert('Vehiculo creado con éxito')
         this.vehiculoForm.reset();
-      }
-    )
+      },
+    );
   }
 
 }

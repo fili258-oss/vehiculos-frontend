@@ -11,6 +11,8 @@ import { VehiculoCreateComponent } from './vehiculos/vehiculo-create/vehiculo-cr
 import { VehiculoEditComponent } from './vehiculos/vehiculo-edit/vehiculo-edit.component';
 import { PropietariosModule } from './propietarios/propietarios.module';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { PropietariosModule } from './propietarios/propietarios.module';
     HttpClientModule,
     VehiculosModule,
     EmpleadosModule,
-    PropietariosModule
+    PropietariosModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
